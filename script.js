@@ -52,7 +52,10 @@ for (const ramen of ramens) {
   // image width height
   img.style.width = "150px";
   img.style.height = "150px";
+  img.alt = ramen.name;
 }
+
+//
 
 // create the #ramen-menu div
 let ramenMenu = document.createElement("div");
@@ -60,3 +63,19 @@ ramenMenu.setAttribute("id", "ramen-menu");
 
 // append ramenMenu to div
 div.appendChild(ramenMenu);
+
+//display ramen function
+function displayRamen(clickImage) {}
+
+// function clickImage(img) {
+// console.log(image_container.value);
+// return img;
+// const images = imageDiv.children;
+// console.log(images);
+// for (image of images) {
+//   displayRamen();
+// }
+// }
+
+// displayRamen();
+// let images = imageDiv.querySelector("img");
