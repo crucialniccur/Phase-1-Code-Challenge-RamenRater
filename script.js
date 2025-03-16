@@ -83,12 +83,27 @@ div.appendChild(ramenMenu);
 let form = document.createElement("form");
 div.appendChild(form);
 form.setAttribute("id", "form");
+//name
 const nameLabel = document.createElement("label");
 nameLabel.textContent = "Name";
 form.append(nameLabel);
 const nameInput = document.createElement("input");
 nameInput.placeholder = "input name here";
 form.append(nameInput);
+
+//restaurant
+const restaurantLabel = document.createElement("label");
+restaurantLabel.textContent = "Restaurant";
+form.append(restaurantLabel);
+const restaurantInput = document.createElement("input");
+form.append(restaurantInput);
+//image url
+
+//rating
+
+// comment textbox
+
+// create button
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
 //     let details = document.createElement('p')
