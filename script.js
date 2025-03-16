@@ -82,6 +82,7 @@ div.appendChild(ramenMenu);
 // add a form
 let form = document.createElement("form");
 div.appendChild(form);
+form.setAttribute("id", "form");
 
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
