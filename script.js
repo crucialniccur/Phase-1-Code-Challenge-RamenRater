@@ -87,7 +87,7 @@ form.style.display = "flex";
 form.style.flexDirection = "column";
 //name
 const nameLabel = document.createElement("label");
-nameLabel.textContent = "Name";
+nameLabel.textContent = "Name:";
 form.append(nameLabel);
 const nameInput = document.createElement("input");
 nameInput.placeholder = "input name here";
@@ -95,9 +95,11 @@ form.append(nameInput);
 
 //restaurant
 const restaurantLabel = document.createElement("label");
-restaurantLabel.textContent = "Restaurant";
+restaurantLabel.textContent = "Restaurant:";
 form.append(restaurantLabel);
 const restaurantInput = document.createElement("input");
+restaurantInput.placeholder = "restaurant";
+
 form.append(restaurantInput);
 //image url
 const imageUrlLabel = document.createElement("label");
