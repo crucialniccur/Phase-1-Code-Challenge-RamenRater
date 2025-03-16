@@ -105,9 +105,19 @@ const imageUrlInput = document.createElement("input");
 imageUrlInput.placeholder = "Image url goes here";
 form.append(imageUrlInput);
 //rating
-
+const ratingLabel = document.createElement("label");
+ratingLabel.textContent = "Rating: ";
+form.append(ratingLabel);
+const ratingInput = document.createElement("input");
+ratingInput.placeholder = "Your rating goes here";
+form.append(ratingInput);
 // comment textbox
-
+const textAreaLabel = document.createElement("label");
+textAreaLabel.textContent = "Comment:";
+form.append(textAreaLabel);
+textAreaInput = document.createElement("textarea");
+textAreaInput.placeholder = "Your comment goes here";
+form.append(textAreaInput);
 // create button
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
