@@ -119,6 +119,9 @@ textAreaInput = document.createElement("textarea");
 textAreaInput.placeholder = "Your comment goes here";
 form.append(textAreaInput);
 // create button
+const createButton = document.createElement("button");
+createButton.textContent = "Create Magic";
+form.append(createButton);
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
 //     let details = document.createElement('p')
