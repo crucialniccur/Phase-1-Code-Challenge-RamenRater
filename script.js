@@ -39,6 +39,8 @@ div.appendChild(imageDiv);
 imageDiv.style.border = "2px solid";
 imageDiv.style.display = "flex";
 imageDiv.style.gap = "1rem";
+imageDiv.style.flexWrap = "wrap";
+imageDiv.style.justifyContent = "space-evenly";
 
 // add images to the div
 // ramens.forEach()
