@@ -28,3 +28,10 @@ console.log(document.body);
 let div = document.createElement("div");
 document.body.append(div);
 div.setAttribute("id", "container");
+
+//create image container
+let imageDiv = document.createElement("div");
+imageDiv.setAttribute("id", "image_container");
+
+//set imageDiv to be child of container
+div.appendChild(imageDiv);
