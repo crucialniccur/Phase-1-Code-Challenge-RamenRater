@@ -64,6 +64,10 @@ for (const ramen of ramens) {
   });
 
   imageDiv.appendChild(img);
+  // let details = document.createElement("p");
+  // imageDiv.appendChild(details);
+  // details.textContent = "am here";
+  //
 }
 
 function displayRamen(ramen) {
@@ -74,6 +78,14 @@ function displayRamen(ramen) {
 
 // append ramenMenu to div
 div.appendChild(ramenMenu);
+
+// handle click function
+
+// function handleCLick(img) {
+//   img.addEventListener('click', function () {
+//     let details = document.createElement('p')
+//   })
+// }
 
 //display ramen function
 // function displayRamen(clickImage) {}
