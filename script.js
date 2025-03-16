@@ -83,6 +83,8 @@ div.appendChild(ramenMenu);
 let form = document.createElement("form");
 div.appendChild(form);
 form.setAttribute("id", "form");
+form.style.display = "flex";
+form.style.flexDirection = "column";
 //name
 const nameLabel = document.createElement("label");
 nameLabel.textContent = "Name";
