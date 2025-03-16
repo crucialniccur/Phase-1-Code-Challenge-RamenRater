@@ -35,6 +35,10 @@ imageDiv.setAttribute("id", "image_container");
 
 //set imageDiv to be child of container
 div.appendChild(imageDiv);
+//styles to the image container
+imageDiv.style.border = "2px solid";
+imageDiv.style.display = "flex";
+imageDiv.style.gap = "1rem";
 
 // add images to the div
 // ramens.forEach()
