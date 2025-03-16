@@ -27,3 +27,4 @@ const ramens = [
 console.log(document.body);
 let div = document.createElement("div");
 document.body.append(div);
+div.setAttribute("id", "container");
