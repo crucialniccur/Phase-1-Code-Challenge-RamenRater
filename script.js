@@ -42,30 +42,41 @@ imageDiv.style.gap = "1rem";
 imageDiv.style.flexWrap = "wrap";
 imageDiv.style.justifyContent = "space-evenly";
 
+// create the #ramen-menu div
+let ramenMenu = document.createElement("div");
+ramenMenu.setAttribute("id", "ramen-menu");
+
 // add images to the div
 // ramens.forEach()
 for (const ramen of ramens) {
   const img = document.createElement("img");
-  imageDiv.appendChild(img);
+  // imageDiv.appendChild(img);
   img.src = `./items/images/${ramen.image}`;
   // console.log(`./items/images/${ramen.image}`);
   // image width height
   img.style.width = "150px";
   img.style.height = "150px";
   img.alt = ramen.name;
+
+  // event listener
+  img.addEventListener("click", () => {
+    displayRamen(ramen);
+  });
+
+  imageDiv.appendChild(img);
 }
 
-//
-
-// create the #ramen-menu div
-let ramenMenu = document.createElement("div");
-ramenMenu.setAttribute("id", "ramen-menu");
+function displayRamen(ramen) {
+  // ramenMenu.appendChild(ramen);
+  const ramenMenu = document.getElementById("ramen-menu");
+  ramenMenu.innerHTML = `<img src="./items/images/${ramen.image}" alt="${ramen.name}" style="width: 400px;">`;
+}
 
 // append ramenMenu to div
 div.appendChild(ramenMenu);
 
 //display ramen function
-function displayRamen(clickImage) {}
+// function displayRamen(clickImage) {}
 
 // function clickImage(img) {
 // console.log(image_container.value);
