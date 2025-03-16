@@ -41,4 +41,6 @@ div.appendChild(imageDiv);
 for (const ramen of ramens) {
   const img = document.createElement("img");
   imageDiv.appendChild(img);
+  img.src = `./items/images/${ramen.image}`;
+  console.log(`./items/images/${ramen.image}`);
 }
