@@ -98,7 +98,12 @@ form.append(restaurantLabel);
 const restaurantInput = document.createElement("input");
 form.append(restaurantInput);
 //image url
-
+const imageUrlLabel = document.createElement("label");
+imageUrlLabel.textContent = "Image: ";
+form.append(imageUrlLabel);
+const imageUrlInput = document.createElement("input");
+imageUrlInput.placeholder = "Image url goes here";
+form.append(imageUrlInput);
 //rating
 
 // comment textbox
