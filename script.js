@@ -53,3 +53,7 @@ for (const ramen of ramens) {
   img.style.width = "150px";
   img.style.height = "150px";
 }
+
+// create the #ramen-menu div
+let ramenMenu = document.createElement("div");
+ramenMenu.setAttribute("id", "ramen-menu");
