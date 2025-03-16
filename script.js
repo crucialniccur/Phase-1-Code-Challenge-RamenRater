@@ -22,3 +22,8 @@ const ramens = [
     image: "tonkotsu.jpg",
   },
 ];
+
+//create a div.container
+console.log(document.body);
+let div = document.createElement("div");
+document.body.append(div);
