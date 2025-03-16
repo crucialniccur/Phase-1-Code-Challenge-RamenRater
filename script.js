@@ -86,6 +86,9 @@ form.setAttribute("id", "form");
 const nameLabel = document.createElement("label");
 nameLabel.textContent = "Name";
 form.append(nameLabel);
+const nameInput = document.createElement("input");
+nameInput.placeholder = "input name here";
+form.append(nameInput);
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
 //     let details = document.createElement('p')
