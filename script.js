@@ -79,7 +79,9 @@ function displayRamen(ramen) {
 // append ramenMenu to div
 div.appendChild(ramenMenu);
 
-// handle click function
+// add a form
+let form = document.createElement("form");
+div.appendChild(form);
 
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
