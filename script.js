@@ -35,3 +35,10 @@ imageDiv.setAttribute("id", "image_container");
 
 //set imageDiv to be child of container
 div.appendChild(imageDiv);
+
+// add images to the div
+// ramens.forEach()
+for (const ramen of ramens) {
+  const img = document.createElement("img");
+  imageDiv.appendChild(img);
+}
