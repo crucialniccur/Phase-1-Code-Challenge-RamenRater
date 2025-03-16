@@ -57,3 +57,6 @@ for (const ramen of ramens) {
 // create the #ramen-menu div
 let ramenMenu = document.createElement("div");
 ramenMenu.setAttribute("id", "ramen-menu");
+
+// append ramenMenu to div
+div.appendChild(ramenMenu);
