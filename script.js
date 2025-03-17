@@ -143,7 +143,7 @@ function showPathToImages() {
     const pathElement = document.createElement("p");
     pathElement.textContent = img.src;
     pathElement.style.fontSize = "10px";
-    img.parentNode.appendChild(pathElement);
+    // img.parentNode.appendChild(pathElement);
   });
 }
 function addSubmitListener() {
@@ -171,7 +171,9 @@ function addSubmitListener() {
     console.log(`Comment is ${commentValue}`);
     // let newComment = commentValue;
     // console.log(e.target.name_input.value);
-    const newImage = document.createElement("img");
+
+    //creating a new image element
+    let newImage = document.createElement("img");
     newImage.style.width = "150px";
     newImage.style.height = "150px";
     // newImage.src = newImageSrc;
@@ -187,18 +189,22 @@ function addSubmitListener() {
     //   newImage.style.height = "150px";
     //   document.getElementById("image_container").appendChild(newImage);
     // }
-
+    // getting internal and external files
     if (imageUrlValue) {
-      const newImage = document.createElement("img");
+      // const newImage = document.createElement("img");
 
       if (
         imageUrlValue.startsWith("http") ||
         imageUrlValue.startsWith("https")
       ) {
-        newImage.src = imageUrlValue; // External
+        newImage.src = imageUrlValue;
       } else {
-        newImage.src = `./items/images/${imageUrlValue}`; // Local
+        newImage.src = imageUrlValue.startsWith("http")
+          ? imageUrlValue
+          : `./items/images/${imageUrlValue}`;
       }
+      document.getElementById("ramen-menu").appendChild(newImage);
+      console.log(`the image url is :  ${imageUrlValue}`);
     }
     // newImage.alt = restaurantValue;
     newImage.alt = newImage.alt;
@@ -210,6 +216,7 @@ function addSubmitListener() {
     // append the new image
     const imageContainer = document.getElementById("image_container");
     imageContainer.appendChild(newImage);
+    document.getElementById("ramen-menu").appendChild(newImage);
   });
 }
 
