@@ -126,6 +126,12 @@ form.append(textAreaInput);
 const createButton = document.createElement("button");
 createButton.textContent = "Create Magic";
 form.append(createButton);
+
+// handle form default behaviour
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(e.target);
+});
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
 //     let details = document.createElement('p')
