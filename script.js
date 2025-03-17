@@ -133,32 +133,88 @@ createButton.setAttribute("id", "create_magic");
 createButton.textContent = "Create Magic";
 form.append(createButton);
 
-// handle form default behaviour
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  //access the name input
-  const nameValue = document.getElementById("name_input").value;
-  console.log(`Name: ${nameValue}`);
-  let newName = nameValue.name;
-  // access restaurant value
-  const restaurantValue = document.getElementById("restaurant_input").value;
-  console.log(`The restaurant: ${restaurantValue}`);
-  let newRestaurant = restaurantValue;
-  //image url
-  const imageUrlValue = document.getElementById("image_url_input").value;
-  console.log(`Image url : ${imageUrlValue}`);
-  let newImageSrc = imageUrlValue;
-  // access the ratings value
-  const rateValue = document.getElementById("rating_input").value;
-  console.log(`Rating: ${rateValue}`);
-  let newRate = rateValue;
-  //access comments value
-  const commentValue = document.getElementById("comment_place").value;
-  console.log(`Comment is ${commentValue}`);
-  let newComment = commentValue;
-  // console.log(e.target.name_input.value);
-});
+// document.querySelector("form").addEventListener("submit", (e) => {
+//   e.preventDefault();
+// });
 
+function showPathToImages() {
+  const images = document.querySelectorAll("#image_container img");
+  images.forEach((img) => {
+    const pathElement = document.createElement("p");
+    pathElement.textContent = img.src;
+    pathElement.style.fontSize = "10px";
+    img.parentNode.appendChild(pathElement);
+  });
+}
+function addSubmitListener() {
+  document.querySelector("form").addEventListener("submit", (e) => {
+    // handle form default behaviour
+    e.preventDefault();
+    //access the name input
+    const nameValue = document.getElementById("name_input").value;
+    console.log(`Name: ${nameValue}`);
+    let newName = nameValue.name;
+    // access restaurant value
+    const restaurantValue = document.getElementById("restaurant_input").value;
+    console.log(`The restaurant: ${restaurantValue}`);
+    // let newRestaurant = restaurantValue;
+    //image url
+    // const imageUrlValue = document.getElementById("image_url_input").value;
+    // console.log(`Image url : ${imageUrlValue}`);
+    // let newImageSrc = imageUrlValue;
+    // access the ratings value
+    const rateValue = document.getElementById("rating_input").value;
+    console.log(`Rating: ${rateValue}`);
+    // let newRate = rateValue;
+    //access comments value
+    const commentValue = document.getElementById("comment_place").value;
+    console.log(`Comment is ${commentValue}`);
+    // let newComment = commentValue;
+    // console.log(e.target.name_input.value);
+    const newImage = document.createElement("img");
+    newImage.style.width = "150px";
+    newImage.style.height = "150px";
+    // newImage.src = newImageSrc;
+    const imageUrlValue = document.getElementById("image_url_input").value;
+    // newImage.src = imageUrlValue;
+    console.log(imageUrlValue);
+    console.log("Input value:", imageUrlValue);
+
+    // if (imageUrlValue) {
+    //   const newImage = document.createElement("img");
+    //   newImage.src = imageUrlValue;
+    //   newImage.style.width = "150px";
+    //   newImage.style.height = "150px";
+    //   document.getElementById("image_container").appendChild(newImage);
+    // }
+
+    if (imageUrlValue) {
+      const newImage = document.createElement("img");
+
+      if (
+        imageUrlValue.startsWith("http") ||
+        imageUrlValue.startsWith("https")
+      ) {
+        newImage.src = imageUrlValue; // External
+      } else {
+        newImage.src = `./items/images/${imageUrlValue}`; // Local
+      }
+    }
+    // newImage.alt = restaurantValue;
+    newImage.alt = newImage.alt;
+    // newImage.rating = newRate;
+    newImage.rating = rateValue;
+    // newImage.name = newName;
+    // newImage.restaurant = newRestaurant;
+
+    // append the new image
+    const imageContainer = document.getElementById("image_container");
+    imageContainer.appendChild(newImage);
+  });
+}
+
+showPathToImages();
+addSubmitListener();
 // console.log(textAreaInput.comment_place.value);
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
