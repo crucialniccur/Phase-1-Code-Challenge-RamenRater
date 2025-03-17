@@ -23,6 +23,11 @@ const ramens = [
   },
 ];
 
+document.addEventListener("DOMContentLoaded", () => {
+  displayRamen();
+  addSubmitListener();
+});
+
 //create a div.container
 console.log(document.body);
 let div = document.createElement("div");
@@ -219,6 +224,7 @@ function addSubmitListener() {
     const imageContainer = document.getElementById("image_container");
     imageContainer.appendChild(newImage);
     document.getElementById("ramen-menu").appendChild(newImage);
+    document.querySelector("form").reset();
   });
 }
 
