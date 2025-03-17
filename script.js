@@ -85,6 +85,8 @@ div.appendChild(form);
 form.setAttribute("id", "form");
 form.style.display = "flex";
 form.style.flexDirection = "column";
+form.style.width = "400px";
+// form.style.justifyContent = "center";
 //name
 const nameLabel = document.createElement("label");
 nameLabel.textContent = "Name:";
