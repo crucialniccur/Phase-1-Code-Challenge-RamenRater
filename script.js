@@ -91,6 +91,7 @@ nameLabel.textContent = "Name:";
 form.append(nameLabel);
 const nameInput = document.createElement("input");
 nameInput.placeholder = "input name here";
+nameInput.setAttribute("id", "name_input");
 form.append(nameInput);
 
 //restaurant
@@ -98,6 +99,7 @@ const restaurantLabel = document.createElement("label");
 restaurantLabel.textContent = "Restaurant:";
 form.append(restaurantLabel);
 const restaurantInput = document.createElement("input");
+restaurantInput.setAttribute("id", "restaurant_input");
 restaurantInput.placeholder = "restaurant";
 
 form.append(restaurantInput);
@@ -107,6 +109,7 @@ imageUrlLabel.textContent = "Image: ";
 form.append(imageUrlLabel);
 const imageUrlInput = document.createElement("input");
 imageUrlInput.placeholder = "Image url goes here";
+imageUrlInput.setAttribute("id", "image_url_input");
 form.append(imageUrlInput);
 //rating
 const ratingLabel = document.createElement("label");
@@ -114,6 +117,7 @@ ratingLabel.textContent = "Rating: ";
 form.append(ratingLabel);
 const ratingInput = document.createElement("input");
 ratingInput.placeholder = "Your rating goes here";
+ratingInput.setAttribute("id", "rating_input");
 form.append(ratingInput);
 // comment textbox
 const textAreaLabel = document.createElement("label");
@@ -121,16 +125,18 @@ textAreaLabel.textContent = "Comment:";
 form.append(textAreaLabel);
 textAreaInput = document.createElement("textarea");
 textAreaInput.placeholder = "Your comment goes here";
+textAreaInput.setAttribute("id", "comment_place");
 form.append(textAreaInput);
 // create button
 const createButton = document.createElement("button");
+createButton.setAttribute("id", "create_magic");
 createButton.textContent = "Create Magic";
 form.append(createButton);
 
 // handle form default behaviour
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(e.target);
+  // console.log(e.target.name_input.value);
 });
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
