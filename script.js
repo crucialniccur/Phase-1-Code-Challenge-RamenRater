@@ -136,9 +136,21 @@ form.append(createButton);
 // handle form default behaviour
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
+  //access the name input
+  const nameValue = document.getElementById("name_input").value;
+  console.log(`Name: ${nameValue}`);
+  // access restaurant value
+  const restaurantValue = document.getElementById("restaurant_input").value;
+  console.log(`The restaurant: ${restaurantValue}`);
+  //image url
+  const imageUrlValue = document.getElementById("image_url_input").value;
+  console.log(`Image url : ${imageUrlValue}`);
   // access the ratings value
   const rateValue = document.getElementById("rating_input").value;
   console.log(`Rating: ${rateValue}`);
+  //access comments value
+  const commentValue = document.getElementById("comment_place").value;
+  console.log(`Comment is ${commentValue}`);
   // console.log(e.target.name_input.value);
 });
 
