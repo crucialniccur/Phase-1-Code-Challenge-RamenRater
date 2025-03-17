@@ -136,8 +136,13 @@ form.append(createButton);
 // handle form default behaviour
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
+  // access the ratings value
+  const rateValue = document.getElementById("rating_input").value;
+  console.log(`Rating: ${rateValue}`);
   // console.log(e.target.name_input.value);
 });
+
+// console.log(textAreaInput.comment_place.value);
 // function handleCLick(img) {
 //   img.addEventListener('click', function () {
 //     let details = document.createElement('p')
