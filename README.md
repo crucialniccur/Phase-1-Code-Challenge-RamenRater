@@ -1,9 +1,9 @@
 # Phase-1-Code-Challenge-RamenRater
 
-The link to the live page hosted on github is :
+The link to the live page hosted on GitHub is :
 
 - [This](https://crucialniccur.github.io/Phase-1-Code-Challenge-RamenRater/)
-  or copy this link on a new tab and paste :
+  or copy this link on a new tab and paste it:
 
 ```
 https://crucialniccur.github.io/Phase-1-Code-Challenge-RamenRater/
@@ -14,13 +14,13 @@ https://crucialniccur.github.io/Phase-1-Code-Challenge-RamenRater/
 ## Setting up The Ramen Rater.
 
 Click the link above to navigate to the live page.
-There , a form and sosme images are visible
+There, a form and some images are visible
 
 ![](https://i.imgur.com/5KImYCs.png)
 
-Fill out the form and according to the placeholder texts.
-In the image url section, add an image link well for it to work.
-After filling out the input fields , tap on the create Magic button and abracadabra!.
+Fill out the form according to the placeholder texts.
+In the image URL section, add an image link well for it to work.
+After filling out the input fields, tap the create Magic button and abracadabra!
 
 ---
 
